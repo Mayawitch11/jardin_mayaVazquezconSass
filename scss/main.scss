@@ -1,0 +1,112 @@
+$color-marigold:#EFA526;
+$color-fireOpal:#E75D44;
+$color-blueYonder:#4A77A9;
+$color-white:#fff;
+$color-grullo:#9A8B6F;
+
+head {
+    .portada {
+        img {
+            max-width:100%;
+            width: 675px;
+            height: 100% ;
+        }
+    }
+}
+body {
+    margin: 0;
+    font-family: 'fredoka';
+}
+
+header {
+        width: 100%;
+        background:$color-marigold;
+        #btn-menu {
+            display: none;
+        }
+
+        label{
+            display: none;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-right: 1px $color-fireOpal;
+            &:hover {
+                cursor: pointer;
+                background: $color-grullo;
+            }
+        }
+    }
+
+.menu {
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        li {
+            border-bottom: $color-fireOpal;
+            &:hover {
+                background: $color-grullo;
+            }
+        a {
+                display: block;
+                padding: 15px 20px;
+                color: $color-white;
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+main {
+    padding: 20px;
+    font-family: 'fredoka';
+    color: black;
+    text-align: left;
+    h1 {
+        font-size: large;
+        p {
+            font-size: small;
+        }
+    }
+    }
+
+@media (max-width:768px) {
+    header{
+        label {
+            display: block;
+        }
+      .menu {
+                position: absolute;
+                background: $color-marigold;
+                width: 70%;
+                margin-left: -70%;
+            ul {
+                    flex-direction: column;
+                    li {
+                        border-top: $color-grullo;
+                    }
+                }
+            }
+        }
+    
+    #btn-menu {
+        &:checked {
+            ~ .menu {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+footer {
+    .piedePagina {
+        img {
+            width: 30%;
+        }
+    } 
+}

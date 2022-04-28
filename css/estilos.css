@@ -1,0 +1,66 @@
+head .portada img {
+  max-width: 100%;
+  width: 675px;
+  height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'fredoka'; }
+
+header {
+  width: 100%;
+  background: #EFA526; }
+  header #btn-menu {
+    display: none; }
+  header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px #E75D44; }
+    header label:hover {
+      cursor: pointer;
+      background: #9A8B6F; }
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex; }
+  .menu ul li {
+    border-bottom: #E75D44; }
+    .menu ul li:hover {
+      background: #9A8B6F; }
+    .menu ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none; }
+
+main {
+  padding: 20px;
+  font-family: 'fredoka';
+  color: black;
+  text-align: left; }
+  main h1 {
+    font-size: large; }
+    main h1 p {
+      font-size: small; }
+
+@media (max-width: 768px) {
+  header label {
+    display: block; }
+  header .menu {
+    position: absolute;
+    background: #EFA526;
+    width: 70%;
+    margin-left: -70%; }
+    header .menu ul {
+      flex-direction: column; }
+      header .menu ul li {
+        border-top: #9A8B6F; }
+  #btn-menu:checked ~ .menu {
+    margin: 0; } }
+
+footer .piedePagina img {
+  width: 30%; }
