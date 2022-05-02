@@ -6,12 +6,16 @@ color-white:#fff;
 color-grullo:#9A8B6F;
 );
 
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
 head {
     .portada {
         img {
             max-width:100%;
-            width: 675px;
-            height: 100% ;
+            @include size(675px ,100% );
         }
     }
 }
