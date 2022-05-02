@@ -1,8 +1,10 @@
-$color-marigold:#EFA526;
-$color-fireOpal:#E75D44;
-$color-blueYonder:#4A77A9;
-$color-white:#fff;
-$color-grullo:#9A8B6F;
+$colores:(
+color-marigold:#EFA526;
+color-fireOpal:#E75D44;
+color-blueYonder:#4A77A9;
+color-white:#fff;
+color-grullo:#9A8B6F;
+);
 
 head {
     .portada {
@@ -13,6 +15,7 @@ head {
         }
     }
 }
+
 body {
     margin: 0;
     font-family: 'fredoka';
@@ -20,7 +23,7 @@ body {
 
 header {
         width: 100%;
-        background:$color-marigold;
+        background:map-get($colores, color-marigold);
         #btn-menu {
             display: none;
         }
@@ -30,10 +33,10 @@ header {
             width: 30px;
             height: 30px;
             padding: 10px;
-            border-right: 1px $color-fireOpal;
+            border-right: 1px map-get($colores, color-fireOpal);
             &:hover {
                 cursor: pointer;
-                background: $color-grullo;
+                background: map-get($colores, color-grullo);
             }
         }
     }
@@ -45,14 +48,14 @@ header {
         padding: 0;
         display: flex;
         li {
-            border-bottom: $color-fireOpal;
+            border-bottom: map-get($colores,color-fireOpal);
             &:hover {
-                background: $color-grullo;
+                background: map-get($colores,color-grullo);
             }
         a {
                 display: block;
                 padding: 15px 20px;
-                color: $color-white;
+                color: map-get($colores,color-white);
                 text-decoration: none;
 
             }
@@ -80,13 +83,13 @@ main {
         }
       .menu {
                 position: absolute;
-                background: $color-marigold;
+                background: map-get($colores, color-marigold);
                 width: 70%;
                 margin-left: -70%;
             ul {
                     flex-direction: column;
                     li {
-                        border-top: $color-grullo;
+                        border-top: map-get($colores,color-grullo);
                     }
                 }
             }
