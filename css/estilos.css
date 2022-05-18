@@ -1,11 +1,9 @@
 head .portada img {
-  max-width: 100%;
-  width: 675px;
-  height: 100%; }
+  background: url(portadaJardin.png); }
 
 body {
   margin: 0;
-  font-family: 'fredoka'; }
+  font-family: "Fredoka"; }
 
 header {
   width: 100%;
@@ -39,7 +37,7 @@ header {
 
 main {
   padding: 20px;
-  font-family: 'fredoka';
+  font-family: "Fredoka";
   color: black;
   text-align: left; }
   main h1 {
@@ -61,6 +59,39 @@ main {
         border-top: #9A8B6F; }
   #btn-menu:checked ~ .menu {
     margin: 0; } }
+
+body .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px; }
+
+body .gallery__item {
+  position: relative; }
+
+body .gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+body .gallery__tittle {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: linear-gradient(rgba 255, 255, 255, 0, black);
+  width: 100%;
+  margin: 0;
+  padding: 10px; }
+
+body .gallery__item :nth-child(4) {
+  grid-column-start: span 2; }
+
+body .gallery__item :nth-child(5) {
+  grid-row-start: span 2; }
+
+body .gallery__item :nth-child(9) {
+  grid-column-start: span 2; }
 
 footer .piedePagina img {
   width: 30%; }
