@@ -1,65 +1,58 @@
-$colores:(
-color-marigold:#EFA526;
-color-fireOpal:#E75D44;
-color-blueYonder:#4A77A9;
-color-white:#fff;
-color-grullo:#9A8B6F;
-);
-
-@mixin size ($width, $height) {
-    width: $width;
-    height: $height;
-}
+$color-marigold:#EFA526;
+$color-fireOpal:#E75D44;
+$color-blueYonder:#4A77A9;
+$color-white:#fff;
+$color-grullo:#9A8B6F;
+$fuente-principal:'Fredoka';
 
 head {
     .portada {
-        img {
-            max-width:100%;
-            @include size(675px ,100% );
-        }
+        img{
+            background:url(portadaJardin.png);
+         }
     }
 }
 
 body {
-    margin: 0;
-    font-family: 'fredoka';
+    margin:0;
+    font-family:$fuente-principal;
 }
 
 header {
-        width: 100%;
-        background:map-get($colores, color-marigold);
+        width:100%;
+        background:$color-marigold;
         #btn-menu {
-            display: none;
+            display:none;
         }
 
         label{
-            display: none;
-            width: 30px;
-            height: 30px;
-            padding: 10px;
-            border-right: 1px map-get($colores, color-fireOpal);
+            display:none;
+            width:30px;
+            height:30px;
+            padding:10px;
+            border-right:1px $color-fireOpal;
             &:hover {
-                cursor: pointer;
-                background: map-get($colores, color-grullo);
+                cursor:pointer;
+                background:$color-grullo;
             }
         }
     }
 
 .menu {
     ul {
-        margin: 0;
-        list-style: none;
-        padding: 0;
-        display: flex;
+        margin:0;
+        list-style:none;
+        padding:0;
+        display:flex;
         li {
-            border-bottom: map-get($colores,color-fireOpal);
+            border-bottom:$color-fireOpal;
             &:hover {
-                background: map-get($colores,color-grullo);
+                background:$color-grullo;
             }
         a {
-                display: block;
-                padding: 15px 20px;
-                color: map-get($colores,color-white);
+                display:block;
+                padding:15px 20px;
+                color:$color-white;
                 text-decoration: none;
 
             }
@@ -68,14 +61,14 @@ header {
 }
 
 main {
-    padding: 20px;
-    font-family: 'fredoka';
-    color: black;
-    text-align: left;
+    padding:20px;
+    font-family:$fuente-principal;
+    color:black;
+    text-align:left;
     h1 {
-        font-size: large;
+        font-size:large;
         p {
-            font-size: small;
+            font-size:small;
         }
     }
     }
@@ -83,17 +76,17 @@ main {
 @media (max-width:768px) {
     header{
         label {
-            display: block;
+            display:block;
         }
       .menu {
-                position: absolute;
-                background: map-get($colores, color-marigold);
-                width: 70%;
-                margin-left: -70%;
+                position:absolute;
+                background:$color-marigold;
+                width:70%;
+                margin-left:-70%;
             ul {
-                    flex-direction: column;
+                    flex-direction:column;
                     li {
-                        border-top: map-get($colores,color-grullo);
+                        border-top:$color-grullo;
                     }
                 }
             }
@@ -102,18 +95,46 @@ main {
     #btn-menu {
         &:checked {
             ~ .menu {
-                margin: 0;
+                margin:0;
             }
         }
     }
 }
 
-
+body {
+ .gallery-container {
+     display:grid;
+     grid-template-columns:repeat(3, 1fr);
+     grid-auto-rows:150px;
+     padding:20px;
+     grid-gap:10px;
+ }
+ .gallery__item {
+     position:relative;
+ }
+ .gallery__tittle {
+position:absolute;
+ }
+.gallery__item :nth-child(4) {
+    grid-column-start:span 2;
+}
+.gallery__item :nth-child(5) {
+    grid-row-start:span 2;
+}
+.gallery__item :nth-child(9) {
+    grid-column-start:span 2;
+}
+.gallery__img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+} 
 
 footer {
     .piedePagina {
         img {
-            width: 30%;
+            width:30%;
         }
     } 
 }
